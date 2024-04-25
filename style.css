@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+body {
+  margin: 0;
+  font-family: Verdana;
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+* { font-family: Verdana, Geneva, Tahoma, sans-serif; }
+
+.topnav {
+  overflow: auto;
+  background-color: #000000;
+  text-align: center;
+}
+
+.navbar {
+  text-align: center;
+  width:100%;
+}
+
+.navbar a {
+  float: left;
+  padding: 0px;
+  color: white;
+  width:16%;
+  text-align: center;
+  width:16%;
+}
+
+.navbar ul{
+  display: inline-block;
+}
+.topnav a {
+  float: center;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 25px;
+  text-decoration: none;
+  font-family:Verdana;
+  font-size: 25px;
+}
+
+.topnav a:hover {
+  background-color: lightblue;
+  color: white;
+}
+
+.topnav a.focus {
+  color: white;
+}
+
+.dropbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 60%;
+  margin-top: -50px;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 450px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: lightblue;
+}
+
+.button {
+  background-color: #000000; 
+  border: 1px solid white; 
+  color: white;
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: center; 
+}
+
+.btn-group button {
+  background-color: #000000; 
+  border: 1px solid white; 
+  color: white;
+  padding: 10px 24px; 
+  cursor: pointer; 
+  float: left; 
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.btn-group button:hover {
+  background-color: lightblue;
+}
+
+
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+.column {
+  margin: 0 auto;
+  float: left;
+  width: 27%;
+  align-items: center;
+  padding: 0 30px;
+  
+}
+
+
+.row {
+  margin: 0 auto;
+  padding: 20px 20px 20px 20px;
+}
+
+
+.row:after {
+  margin: 10 auto;
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.card {
+  margin: 0 auto
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+.container {
+  margin: 0 auto
+  padding: 2px 16px;
+}
+.mav-logo {
+  width: 10px;
+  height: 10px;
+}
+.logo {
+  border: 2px solid #333;
+  text-align:left;
+}
+.leagueStats {
+  background-color: lightcyan;
+}
+
+.leagueStatsImg {
+  background-image: url("Images/PhxSuns1.jpg");
+  padding: 25px;
+}
+
+
+
+.Time{
+display: flex;
+flex-direction: column;
+justify-content: center;
+background-color: rgba(0, 0, 0, 0.877);
+}
+
+.Suns {
+  background-color: orange;
+}
+
+.Mavs {
+  background-color: rgba(37, 68, 245, 0.89);
+}
+
+.teamname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  font-size: 15px;
+  color: whitesmoke;
+}
+.logo-A {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  padding: 0em 0.5em; 
+  background-color: blue; 
+}
+.logo-B {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  padding: 0em 0.5em; 
+  background-color: rgb(243, 149, 42); 
+}
+
+.team {
+  display: flex;
+  flex-direction: row;
+  color: white; 
+}
+
+.Turnovers {
+  color: white;
+  font-size: 15px;
+}
+
+.TeamStructure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.TeamStructure {
+  padding: 0em 0.5em; 
+}
+
+.TeamStructure{
+  font-size: 2; 
+}
+
+.TeamStructure{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+.TeamStructure{
+  width: 150px; 
+  font-size: 0.5em; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  opacity: 0.8;
+}
+.TimerLook{
+  display: flex;
+  flex-direction: row; 
+}
+
+.TimerLook > * {
+  border-right:c1px solid white; 
+  padding: 0em 1em; 
+  color: white;
+}
+
+.TimerLook > *:last-child {
+  border-right: 0; 
+  color: yellow; 
+}
+.score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  color: white;
+  font-size: 15px;
+}
+
+.gameOfDay {
+  text-align: center;
+}
+
+.newsOfDay {
+  text-align: center;
+}
+
+.homepage {
+  background-color: lightcyan
+  font-family: Verdana;
+}
+
+.liveGame {
+  text-align: center;
+}
+
+.h1 {
+  text-align: center;
+  
+}
+
+.wt.h2 {
+  text-align: center;
+}
+
+.image {
+  display: block;
+  margin-left: center;
+  margin-right: center;
+  width: 100%;
+
+}
+
+.div {
+   border-bottom: double;
+
+.games {
+  margin: 0 auto
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 10px solid red;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+.div {
+  width: 300px;
+  height: 200px;
+  border: 15px solid black;
+  padding: 50px;
+  margin: 200px;
+}
+
+.card2 {
+  margin: 0 auto
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  background-color: white;
+
+</style>
+</head>
+</body>
+</html>
